@@ -2,6 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+.bordersk {
+  border-left: 1px solid #ebebeb;
+}
+
+.bordersks:hover + .bordersk {
+  border-left: 0px solid #ebebeb;
+}
+.bordersks:focus + .bordersk {
+  border-left: 0px solid #ebebeb;
+}
+
+.borderthird {
+  border-left: 1px solid #ebebeb;
+}
+
+.bordersk:hover + .borderthird {
+  border-left: 0px solid #ebebeb;
+}
+.border2 {
+  border-left: 1px solid #ebebeb;
+}
+
+.borderthird:hover + .border2 {
+  border-left: 0px solid #ebebeb;
+}
+
+.bordersks:hover input {
+  background-color: #ebebeb;
+}
+.bordersks:focus input {
+  background-color: white;
+}
+.bordersks input:focus {
+  background-color: white;
+}
+.bordersks:has(input:focus) {
+  background-color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-top-left-radius: 30px; /* Top left corner */
+  border-bottom-left-radius: 30px; /* Bottom left corner */
+  border-top-right-radius: 30px; /* Top right corner */
+  border-bottom-right-radius: 30px; /* Bottom right corner */
+}
+.bordersks:has(input:focus) ~ .bordersk {
+  border-left: 0px;
+}
+
+/* another border */
+
+/* button red */
+
+.border2:focus + .texts::before {
+  content: "shihab";
+
+  position: absolute;
+  left: 40px;
+  bottom: 10px;
+}
+.border2:focus + .texts {
+  padding-right: 70px;
+  border-top-left-radius: 20px; /* Top left corner */
+  border-bottom-left-radius: 20px; /* Bottom left corner */
+  border-top-right-radius: 20px; /* Top right corner */
+  border-bottom-right-radius: 20px; /* Bottom right corner */
+  cursor: pointer;
+}
+.border2:focus + .texts:hover {
+  background-color: crimson;
+}
+
+/* button red */
+
 .color {
   border-radius: 30px;
   border-color: #dbd5d5;
