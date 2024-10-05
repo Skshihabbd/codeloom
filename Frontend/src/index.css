@@ -12,7 +12,45 @@
 .bordersks:focus + .bordersk {
   border-left: 0px solid #ebebeb;
 }
+.bordersks:focus .bordersk .borderthird {
+  background-color: blanchedalmond;
+  border-top-left-radius: 30px; /* Top left corner */
+  border-bottom-left-radius: 30px; /* Bottom left corner */
+  border-top-right-radius: 30px; /* Top right corner */
+  border-bottom-right-radius: 30px; /* Bottom right corner */
+}
+/* .comon:first-child:focus ~ .comon {
+  background-color: #ebebeb;
+} */
+.comon:first-child:focus ~ .comon:nth-child(4) {
+  border-top-right-radius: 30px; /* Top right corner */
+  border-bottom-right-radius: 30px; /* Bottom right corner */
+}
+/* .comon:first-child:has(.input:focus) ~ .comon:nth-child(2),
+.comon:first-child:has(.input:focus) ~ .comon:nth-child(3),
+.comon:first-child:has(.input:focus) ~ .comon:nth-child(4) {
+  background-color: #ebebeb;
+} */
 
+.scroll-bar {
+  scrollbar-width: thin;
+}
+.scroll-bar::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 10px;
+}
+.scroll-bar::-webkit-scrollbar-thumb {
+  background-color: blue;
+}
+
+.comon:first-child:has(.input:focus) ~ .comon:nth-child(4) {
+  border-top-right-radius: 30px; /* Top right corner */
+  border-bottom-right-radius: 30px; /* Bottom right corner */
+}
+
+.divi:focus-within {
+  background-color: brown;
+}
 .borderthird {
   border-left: 1px solid #ebebeb;
 }
