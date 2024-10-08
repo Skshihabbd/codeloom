@@ -32,15 +32,15 @@
   background-color: #ebebeb;
 } */
 
-.scroll-bar {
-  scrollbar-width: thin;
+.scroll-bar::-webkit-scrollbar {
+  width: 5px;
 }
 .scroll-bar::-webkit-scrollbar-track {
-  background: black;
-  border-radius: 10px;
+  background: white;
 }
 .scroll-bar::-webkit-scrollbar-thumb {
-  background-color: blue;
+  background: #8e8e8e;
+  border-radius: 30px;
 }
 
 .comon:first-child:has(.input:focus) ~ .comon:nth-child(4) {
@@ -87,6 +87,10 @@
 .bordersks:has(input:focus) ~ .bordersk {
   border-left: 0px;
 }
+
+/* check navbar */
+
+/* check navbar */
 
 /* another border */
 
@@ -141,3 +145,39 @@
   color: white;
   padding: 20px;
 }
+
+/* calender css */
+
+.rdrDefinedRangesWrapper {
+  display: none;
+}
+.rdrMonthPicker {
+  font-size: x-large;
+}
+.rdrDayNumber {
+  font-size: 20px;
+}
+.rdrYearPicker {
+  display: none;
+}
+.rdrDateDisplayWrapper {
+  display: none;
+}
+.rdrMonthName {
+  font-size: 30px;
+  color: black !important;
+}
+.rdrMonthPicker {
+  display: none;
+}
+
+/* Change the background color for days in the range */
+
+/* Remove the default border for selected and hovered days */
+.rdrDay {
+  border: none !important; /* Ensure no default border is present */
+}
+
+/* If necessary, also reset the border for the selected days */
+
+/* calender css */
