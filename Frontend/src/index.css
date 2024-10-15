@@ -96,14 +96,14 @@
 
 /* button red */
 
-.border2:focus + .texts::before {
+.border2:focus-within .texts::before {
   content: "shihab";
-
   position: absolute;
   left: 40px;
   bottom: 10px;
+  color: azure;
 }
-.border2:focus + .texts {
+.border2:focus-within .texts {
   padding-right: 70px;
   border-top-left-radius: 20px; /* Top left corner */
   border-bottom-left-radius: 20px; /* Bottom left corner */
@@ -181,3 +181,13 @@
 /* If necessary, also reset the border for the selected days */
 
 /* calender css */
+/* Change the color of the pagination bullets */
+.swiper-pagination-bullet {
+  background-color: #e9e5e5 !important; /* Default bullet color */
+  /* Make sure the bullets are fully visible */
+}
+
+/* Change the color of the active pagination bullet */
+.swiper-pagination-bullet-active {
+  background-color: #e2d3d3 !important; /* Active bullet color */
+}

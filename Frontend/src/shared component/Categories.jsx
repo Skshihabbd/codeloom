@@ -50,13 +50,13 @@ const Categories = ({ categories }) => {
     // }
   }, [prevRef, nextRef]);
   return (
-    <div className="cursor-pointer mt-3 overflow-x-auto mx-7  ">
+    <div className="cursor-pointer mt-3 overflow-x-auto  mx-7  ">
       <>
         <div className={`left-2 top-12   absolute  shadow-xl `} ref={prevRef}>
           <IoIosArrowDropleftCircle className="text-3xl " />
         </div>
         <div
-          className={`right-4 bottom-14 absolute shadow-2xl  `}
+          className={`right-2 bottom-14 absolute shadow-2xl  `}
           ref={nextRef}
         >
           <IoIosArrowDroprightCircle className=" text-3xl" />

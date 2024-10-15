@@ -220,11 +220,11 @@ const Home = () => {
 
   return (
     <div className={`w-full relative   `}>
-      <div className=" fixed top-0 left-0 z-20 w-full bg-white">
+      <div className="  fixed py-3 md:py-0 md:top-0 md:left-0 z-20 w-full bg-white">
         <div
           className={`md:pt-4 md:pb-8   lg:py-9 flex mx-auto w-11/12 justify-between items-center flex-wrap `}
         >
-          <div className="">
+          <div className="hidden md:block">
             <Nav_start />
           </div>
 
@@ -232,8 +232,8 @@ const Home = () => {
           <div className={``}>
             <div>
               <div
-                className={`flex justify-center animate__animated animate__flipInX  ${
-                  isScrolled ? "hidden" : ""
+                className={`flex   justify-center animate__animated animate__flipInX  ${
+                  isScrolled ? "hidden " : ""
                 }`}
               >
                 <button className="mr-4 text-2xl">Stays</button>
@@ -243,8 +243,8 @@ const Home = () => {
               {/* Second Nav */}
               <div
                 onClick={handleChildDivClick}
-                className={` flex shadow-xl justify-center   py-2 items-center  bg-white border-[1px]  rounded-[30px]  md:gap-3 gap-0  text-lg ${
-                  isScrolled ? "" : "hidden"
+                className={`py-1  flex shadow-xl justify-center   py-2 items-center  bg-white border-[1px]  rounded-[30px]  md:gap-3 gap-0  text-lg ${
+                  isScrolled ? "" : " md:hidden"
                 }`}
               >
                 <button
@@ -254,7 +254,7 @@ const Home = () => {
                       setGuest(false);
                     setIsScrolled(false);
                   }}
-                  className="pl-3 "
+                  className="md:pl-3 "
                 >
                   <p>Anywhere</p>
                 </button>
@@ -272,7 +272,7 @@ const Home = () => {
                 </button>
                 <hr className="h-5  w-[1px] bg-slate-900 " />
                 <button
-                  className="px-3"
+                  className="md:px-3"
                   onClick={() => {
                     setDestination(false),
                       setCalenderDay(false),
@@ -289,7 +289,7 @@ const Home = () => {
                       setGuest(true);
                     setIsScrolled(false);
                   }}
-                  className="bg-red-600  p-2 rounded-full"
+                  className="bg-red-600 hidden md:block  p-2 rounded-full"
                 >
                   <IoSearch className="text-white" />
                 </button>
@@ -297,16 +297,16 @@ const Home = () => {
             </div>
           </div>
 
-          <div>
+          <div className="hidden md:block">
             <End_nav />
           </div>
         </div>
       </div>
-      <div>
+      <div className="">
         {/* Second Navbar */}
         <div
-          className={`bg-white  fixed w-full animate__animated animate__zoomIn   z-30 top-20 py-10 ${
-            isScrolled ? "hidden " : ""
+          className={`bg-white hidden md:block  fixed w-full animate__animated animate__zoomIn   z-30 top-24 py-10 ${
+            isScrolled ? "md:hidden " : ""
           } `}
         >
           <div
@@ -385,7 +385,7 @@ const Home = () => {
 
             <button
               onClick={handleGuest}
-              className="md:w-[220px]  lg:w-[260px] border2 h-full comon hover:bg-[#EBEBEB] hover:rounded-r-[28px] hover:rounded-l-[30px]"
+              className="md:w-[220px] relative lg:w-[260px] border2 h-full comon hover:bg-[#EBEBEB] hover:rounded-r-[28px] hover:rounded-l-[30px]"
             >
               <p className="text-left pl-2">
                 Who <br />
@@ -412,15 +412,15 @@ const Home = () => {
                   )}
                 </span>
               </p>
+              <button
+                onMouseEnter={handleSetBg}
+                onMouseLeave={handleRemoveBg}
+                className="bg-red-500    rounded-full absolute top-3 right-8 texts p-3"
+              >
+                <IoSearch className="  text-white  " />
+              </button>
             </button>
-            {/* search button */}
-            <button
-              onMouseEnter={handleSetBg}
-              onMouseLeave={handleRemoveBg}
-              className="bg-red-500  rounded-full texts p-3 md:bottom-[52px] md:right-24 absolute lg:top-[52px] lg:right-80 "
-            >
-              <IoSearch className="  text-white      " />
-            </button>
+
             {/* search button */}
           </div>
 
@@ -430,7 +430,7 @@ const Home = () => {
             onMouseLeave={handleOnMouseRemove}
             className={` ${marzin ? "h-96" : "h-72"} ${
               destination ? "" : "hidden"
-            }  bg-white md:w-[320px] lg:w-[390px]   border-b-2 shadow-2xl md:left-16 lg:left-72 z-50 rounded-xl absolute  h-96`}
+            }  bg-white md:w-[320px] lg:w-[390px]   border-b-2 shadow-2xl md:left-16 lg:left-72 2xl:left-[550px] z-50 rounded-xl absolute  h-96`}
           >
             <div className="overflow-y-auto scroll-bar md:w-[315px]  lg:w-[385px] h-full">
               <div className="flex justify-between flex-col gap-8 mx-4 ">
@@ -449,7 +449,7 @@ const Home = () => {
 
           {/* date calender menu */}
           <div
-            className={`mt-4 w-[760px] h-96 rounded-2xl bg-white absolute left-[300px]   ${
+            className={`mt-4 w-[760px] h-96 rounded-2xl bg-white absolute lg:left-[300px] 2xl:left-[550px]   ${
               calenderday ? "" : "hidden"
             }  `}
           >
@@ -471,7 +471,7 @@ const Home = () => {
           <div
             className={`mt-4 ${
               guest ? "" : "hidden"
-            }  lg:w-[390px] h-96 absolute right-72 rounded-2xl  bg-white`}
+            }  lg:w-[390px] h-96 absolute md:right-10 lg:right-72 2xl:right-[550px]  rounded-2xl  bg-white`}
           >
             {/* child parent div  */}
             <div className="overflow-y-auto scroll-bar w-[370px] h-[360px] ">
@@ -540,7 +540,7 @@ const Home = () => {
                     >
                       <CiCircleMinus />
                     </button>
-                    <p className="text-xl">{infants}</p>
+                    <p className="text-xl w-6">{infants}</p>
                     <button
                       disabled={infants === 5}
                       onClick={() => setInfants(infants + 1)}
@@ -567,7 +567,7 @@ const Home = () => {
                     >
                       <CiCircleMinus />
                     </button>
-                    <p className="text-xl">{pet}</p>
+                    <p className="text-xl w-6">{pet}</p>
                     <button
                       disabled={pet === 5}
                       onClick={() => setPet(pet + 1)}
@@ -588,7 +588,7 @@ const Home = () => {
       {/* category */}
       <div
         className={`w-full fixed z-20  bg-white h-32 py-6 ${
-          position ? " md:top-24 lg:top-28" : "top-60"
+          position ? "top-16 md:top-24 lg:top-28" : "top-24 md:top-60"
         }`}
       >
         <hr className="h-[1px] w-full bg-black" />
@@ -598,11 +598,17 @@ const Home = () => {
       </div>
       {/* category */}
       <div className=" absolute w-full top-96    ">
-        <div className="  w-11/12 mx-auto gap-4  grid grid-cols-4 ">
+        <div className="  w-11/12 mx-auto   grid md:grid-cols-2 lg:grid-cols-4  2xl:grid-cols-5 gap-2  ">
           {hotel?.map((info, idx) => (
             <Alldata key={idx} info={info}></Alldata>
           ))}
         </div>
+      </div>
+      <div className="fixed w-full bottom-0 border-2 bg-white py-6  z-30  ">
+        <footer className="flex justify-between h-3 bg-white w-11/12 mx-auto">
+          <p>© 2024 Airbnb, Inc.</p>
+          <p>Support & resources</p>
+        </footer>
       </div>
     </div>
   );

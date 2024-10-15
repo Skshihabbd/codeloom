@@ -11,7 +11,7 @@ const Authorization = ({ children }) => {
 
   useEffect(() => {
     const handleAllDatas = async () => {
-      const { data } = await axios(`http://localhost:5005/hotel`);
+      const { data } = await axios(`https://backend-tau-sage.vercel.app/hotel`);
       setHotel(data);
     };
     handleAllDatas();
